@@ -1,0 +1,25 @@
+{
+  "id": "conv-1784110961604-94zhdryav",
+  "providerId": "claude",
+  "title": "Greet in Chinese",
+  "titleGenerationStatus": "success",
+  "createdAt": 1784110961605,
+  "updatedAt": 1784265258781,
+  "lastResponseAt": 1784265258781,
+  "sessionId": "8c093d27-a94f-47e0-a65f-53dba4eb3cd5",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "8c093d27-a94f-47e0-a65f-53dba4eb3cd5"
+  },
+  "currentNote": "Machine Learning/Guide.md",
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 31,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 46336,
+    "contextWindow": 1000000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 46367,
+    "percentage": 5
+  }
+}
