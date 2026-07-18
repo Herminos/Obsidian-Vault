@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/Concepts/正则化 Regularization.md",
+                "file": "Machine Learning/Optimization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "正则化 Regularization"
+              "title": "Optimization"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "68b7048baa740e34",
@@ -205,10 +206,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7851651f842ad71e",
+  "active": "1d82e4fc9ddf1e2e",
   "lastOpenFiles": [
-    "未命名.md",
+    "Machine Learning/CLAUDE.md.tmp.1124858.2cc789986821",
+    "Machine Learning/Optimization.md.tmp.1124858.7efb8197e72e",
+    "Pasted image 20260718165713.png",
+    "Machine Learning/CLAUDE.md",
+    "Machine Learning/Optimization.md",
+    "Machine Learning/Guide.md",
+    "未命名.canvas",
+    "2026-07-17.md",
+    "Machine Learning/未命名.base",
     "Machine Learning/Concepts/正则化 Regularization.md",
+    "未命名.md",
     "Machine Learning/CLAUDE.md.tmp.27697.4541937c49c2",
     "Machine Learning/Concepts/深度学习 Deep Learning.md",
     "Machine Learning/Concepts/深度学习 Deep Learning.md.tmp.27697.01dc640ff4c1",
@@ -225,11 +235,7 @@
     "Machine Learning/Concepts/模型偏差 Model Bias.md",
     "Machine Learning/Concepts/过拟合 Overfitting.md",
     "Machine Learning/Concepts/模型偏差 Model Bias.md.tmp.27697.9a381beeca30",
-    "Machine Learning/Concepts/正则化 Regularization.md.tmp.27697.9390e4aa1319",
-    "Machine Learning/Concepts/过拟合 Overfitting.md.tmp.27697.44167545f1d8",
     "损失函数 Loss Function.md",
-    "Machine Learning/CLAUDE.md",
-    "Machine Learning/Guide.md",
     "Machine Learning/ml.md",
     "线性模型 Linear Model.md",
     "欢迎.md"

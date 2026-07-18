@@ -92,6 +92,7 @@ $$
 当前已有笔记：
 - `Guide.md` — 课程入门：机器学习基本概念、损失函数、梯度下降、线性模型
 - `ml.md` — 训练流程与诊断：过拟合、模型偏差、交叉验证、不匹配
+- `Optimization.md` — 优化失败诊断：临界点、鞍点、Hessian 矩阵、批次对比、动量
 - `Concepts/` — 概念详解目录：
   - `过拟合 Overfitting.md`
   - `正则化 Regularization.md`
