@@ -98,7 +98,7 @@ $$
 \nabla L \approx \frac{1}{B} \sum_{b=1}^{B} \nabla L_{b}
 $$
 
-这是实践中**最常用**的方式。详见 [[Guide.md#6-批次训练-batch-training]]。
+这是实践中**最常用**的方式。详见 [[入门 Guide#6-批次训练-batch-training]]。
 
 ### 6.4 带动量 (Momentum)
 
@@ -148,6 +148,6 @@ $$
 
 ## 9. 相关链接
 
-- [[Guide.md]] — 梯度下降的入门推导
+- [[入门 Guide]] — 梯度下降的入门推导
 - [[损失函数 Loss Function]]
-- [[ml.md]]
+- [[训练流程与诊断 ml]]

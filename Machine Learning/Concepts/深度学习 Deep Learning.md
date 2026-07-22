@@ -120,7 +120,7 @@ created: 2026-07-20
 
 ## 8. 相关链接
 
-- [[Guide.md]] — 深度学习入门定义
+- [[入门 Guide]] — 深度学习入门定义
 - [[神经网络 Neural Network]]
 - [[激活函数 Activation Function]]
 - [[梯度下降 Gradient Descent]]

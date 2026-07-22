@@ -13,12 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Machine Learning/ml.md",
+                "file": "Machine Learning/分类 Classification.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ml"
+              "title": "分类 Classification"
+            }
+          },
+          {
+            "id": "806348bc73662c21",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -186,7 +196,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -205,28 +215,32 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1d82e4fc9ddf1e2e",
+  "active": "7851651f842ad71e",
   "lastOpenFiles": [
+    "Machine Learning/CLAUDE.md.tmp.287604.66b81628bbf0",
+    "Machine Learning/CLAUDE.md.tmp.287604.8ce4bff42c20",
+    "Machine Learning/优化 Optimization.md",
+    "Machine Learning/训练流程与诊断 ml.md",
+    "Machine Learning/入门 Guide.md",
     "Machine Learning/Optimization.md",
+    "Machine Learning/CLAUDE.md.tmp.287604.5f72e18124b7",
+    "Machine Learning/CLAUDE.md.tmp.287604.ad347c5e31b0",
+    "Machine Learning/CLAUDE.md.tmp.287604.8f373ac31452",
+    "Machine Learning/Classification.md",
+    "Machine Learning/分类 Classification.md",
+    "Machine Learning/Classification.md.tmp.287604.19f2fcff0da0",
+    "Machine Learning/CLAUDE.md.tmp.287604.2e420bc60f26",
+    "Machine Learning/CLAUDE.md.tmp.287604.b86ec5c7b872",
     "Home.md",
-    "Home.md.tmp.34344.dfa70bf06feb",
-    "Machine Learning/Concepts/过拟合 Overfitting.md.tmp",
-    "Machine Learning/Concepts/线性模型 Linear Model.md.tmp",
-    "Machine Learning/Concepts/神经网络 Neural Network.md.tmp",
-    "Machine Learning/Concepts/激活函数 Activation Function.md.tmp",
-    "Machine Learning/Concepts/深度学习 Deep Learning.md.tmp",
-    "Machine Learning/Concepts/正则化 Regularization.md.tmp",
-    "Machine Learning/Concepts/模型偏差 Model Bias.md.tmp",
-    "Machine Learning/Concepts/梯度下降 Gradient Descent.md.tmp",
-    "Machine Learning/Concepts/损失函数 Loss Function.md.tmp",
-    "Machine Learning/Concepts/过拟合 Overfitting.md",
-    "Machine Learning/Guide.md",
-    "Machine Learning/CLAUDE.md",
+    "Machine Learning/CLAUDE.md.tmp.1124858.2cc789986821",
+    "Machine Learning/Optimization.md.tmp.1124858.7efb8197e72e",
     "Pasted image 20260718165713.png",
+    "Machine Learning/CLAUDE.md",
+    "Machine Learning/Guide.md",
     "未命名.canvas",
     "2026-07-17.md",
+    "Machine Learning/未命名.base",
     "Machine Learning/Concepts/正则化 Regularization.md",
-    "未命名.md",
     "Machine Learning/Concepts/深度学习 Deep Learning.md",
     "Machine Learning/Concepts/神经网络 Neural Network.md",
     "Machine Learning/Concepts/激活函数 Activation Function.md",
@@ -234,6 +248,7 @@
     "Machine Learning/Concepts/损失函数 Loss Function.md",
     "Machine Learning/Concepts/梯度下降 Gradient Descent.md",
     "Machine Learning/Concepts/模型偏差 Model Bias.md",
+    "Machine Learning/Concepts/过拟合 Overfitting.md",
     "损失函数 Loss Function.md",
     "Machine Learning/ml.md",
     "线性模型 Linear Model.md",

@@ -86,5 +86,5 @@ $$
 
 - [[正则化 Regularization]]
 - [[模型偏差 Model Bias]]
-- [[Guide.md]]
-- [[ml.md]]
+- [[入门 Guide]]
+- [[训练流程与诊断 ml]]

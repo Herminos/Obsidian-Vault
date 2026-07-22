@@ -113,7 +113,7 @@ $$
 
 ## 9. 相关链接
 
-- [[Guide.md]] — 神经网络的入门定义
+- [[入门 Guide]] — 神经网络的入门定义
 - [[深度学习 Deep Learning]]
 - [[激活函数 Activation Function]]
 - [[梯度下降 Gradient Descent]]

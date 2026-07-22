@@ -112,7 +112,7 @@ $$
 
 ## 6. 相关链接
 
-- [[Guide.md]] — 损失函数的入门定义
+- [[入门 Guide]] — 损失函数的入门定义
 - [[梯度下降 Gradient Descent]]
 - [[过拟合 Overfitting]]
 - [[正则化 Regularization]]

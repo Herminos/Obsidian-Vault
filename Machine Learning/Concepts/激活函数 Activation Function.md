@@ -132,7 +132,7 @@ $$
 
 ## 6. 相关链接
 
-- [[Guide.md]] — Sigmoid 和 ReLU 的入门介绍
+- [[入门 Guide]] — Sigmoid 和 ReLU 的入门介绍
 - [[神经网络 Neural Network]]
 - [[线性模型 Linear Model]]
 - [[深度学习 Deep Learning]]

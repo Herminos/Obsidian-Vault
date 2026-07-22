@@ -188,7 +188,7 @@ $$
 
 ## 7. 相关链接 (Related)
 
-- [[Guide.md]] — 机器学习入门：损失函数、梯度下降、线性模型
+- [[入门 Guide]] — 机器学习入门：损失函数、梯度下降、线性模型
 - [[过拟合 Overfitting]]
 - [[正则化 Regularization]]
 - [[模型偏差 Model Bias]]
