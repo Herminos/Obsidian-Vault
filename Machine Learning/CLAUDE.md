@@ -67,8 +67,8 @@ $$
 
 ## 4. 相关链接 (Related)
 
-- [[相关概念1]]
-- [[相关概念2]]
+- [[梯度下降 Gradient Descent]]
+- [[损失函数 Loss Function]]
 ```
 
 ### 5. 行内指令标记 (For Claude)

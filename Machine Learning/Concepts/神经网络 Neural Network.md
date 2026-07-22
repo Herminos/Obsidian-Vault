@@ -1,3 +1,13 @@
+---
+tags:
+  - ml/concept
+  - ml/neural-net
+aliases:
+  - Neural Network
+  - 神经网络
+created: 2026-07-20
+---
+
 # 神经网络 (Neural Network)
 
 ## 1. 定义

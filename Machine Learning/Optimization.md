@@ -1,3 +1,12 @@
+---
+tags:
+  - ml/optimization
+aliases:
+  - 优化诊断
+  - Optimization Diagnosis
+created: 2026-07-20
+---
+
 # 优化失败时的诊断与对策 (Optimization: Diagnosis and Solutions)
 
 当[[梯度下降 Gradient Descent]]停在某个梯度为零的点，但损失值仍不理想时，说明优化遇到了困难。本笔记讨论如何诊断和处理优化失败的问题。
@@ -248,11 +257,132 @@ $$
   - 有正有负 → Saddle Point
 - **小 Batch 更有助于泛化**：噪声梯度帮助找到 Flat Minima，但训练时间更长
 - **动量**给优化增加了「惯性」，是逃离鞍点和加速收敛的关键技术
-- 现代优化器（如 Adam）同时结合了动量和自适应学习率
+- **自适应学习率 (Adagrad / RMSProp / Adam)** 为每个参数独立调整学习率，解决不同参数需要不同步长的问题
+- **学习率调度 (Learning Rate Scheduling)**（如 Decay 和 Warm Up）让学习率随时间变化，训练末段精细收敛
+- 现代深度学习训练的标准配置：**Adam + Warm Up + Learning Rate Decay**
+---
+
+## 5. 自适应学习率 (Adaptive Learning Rate)
+
+### 5.1 训练卡住 ≠ 梯度很小
+
+即使没有遇到临界点（梯度不为零），训练也可能进展困难：
+
+- **学习率太大**：参数在最小值附近反复震荡，无法逼近最优解
+- **学习率太小**：训练进展极其缓慢，需要大量迭代
+
+更进一步，**不同的参数往往需要不同的学习率**。某些参数的梯度始终很小（平坦方向），需要较大的学习率；某些参数的梯度很大（陡峭方向），需要较小的学习率以避免震荡。这就是**自适应学习率 (Adaptive Learning Rate)** 的核心动机。
+
+### 5.2 Adagrad：基于 Root Mean Square 的自适应学习率
+
+**Adagrad (Adaptive Gradient)** 为每个参数独立调整学习率，核心思想是：经常更新的参数学习率变小，较少更新的参数学习率变大。
+
+具体来说，对每个参数 $\theta_i$，Adagrad 维护其历史梯度的平方和：
+
+$$
+G_{i}^{t} = G_{i}^{t-1} + (\nabla_{\theta_i} L^{t})^{2}
+$$
+
+然后用 $\sqrt{G_{i}^{t}}$ 来缩放学习率：
+
+$$
+\theta_i^{t+1} \leftarrow \theta_i^{t} - \frac{\eta}{\sqrt{G_{i}^{t} + \varepsilon}} \cdot \nabla_{\theta_i} L^{t}
+$$
+
+其中 $\varepsilon$ 是一个很小的数（如 $10^{-8}$），防止除零。
+
+> 📐 这里的 $\sqrt{G_{i}^{t}}$ 实质上就是梯度的 **Root Mean Square (RMS)**：
+> $$
+> \text{RMS}[\nabla_{\theta_i}]^{t} = \sqrt{\frac{1}{t} \sum_{k=1}^{t} (\nabla_{\theta_i} L^{k})^{2}} = \sqrt{\frac{G_{i}^{t}}{t}}
+> $$
+
+**Adagrad 的局限性**：由于 $G_{i}^{t}$ 单调递增，学习率最终会衰减到非常小，导致训练后期参数几乎不再更新。这在某些场景下（如需要动态调整学习率的任务中）是不理想的。
+
+### 5.3 RMSProp：引入衰减因子的自适应学习率
+
+**RMSProp (Root Mean Square Propagation)** 是对 Adagrad 的改进。它不再累加全部历史梯度，而是用**指数移动平均 (Exponential Moving Average, EMA)** 来估计梯度的二阶矩：
+
+$$
+G_{i}^{t} = \alpha \cdot G_{i}^{t-1} + (1 - \alpha) \cdot (\nabla_{\theta_i} L^{t})^{2}
+$$
+
+参数更新方式与 Adagrad 相同：
+
+$$
+\theta_i^{t+1} \leftarrow \theta_i^{t} - \frac{\eta}{\sqrt{G_{i}^{t} + \varepsilon}} \cdot \nabla_{\theta_i} L^{t}
+$$
+
+其中 $\alpha$ 是**衰减因子 (Decay Rate)**，通常设为 $0.9$。
+
+**RMSProp 相比 Adagrad 的优势**：
+
+- 距离当前步越近的梯度，对 $G_{i}^{t}$ 的影响越大（由 $\alpha$ 控制）
+- $G_{i}^{t}$ 不会单调递减到零，学习率可以保持在一个合理的范围
+- 能够动态适应损失平面的变化
+
+### 5.4 Adam：RMSProp + Momentum
+
+**Adam (Adaptive Moment Estimation)** 是目前最常用的优化器，它结合了 RMSProp 的自适应学习率和动量的惯性：
+
+$$
+\begin{aligned}
+\mathbf{m}^{t} &= \beta_1 \mathbf{m}^{t-1} + (1 - \beta_1) \cdot \nabla L(\boldsymbol{\theta}^{t}) \quad &\text{(一阶矩 / 动量)} \\
+\mathbf{v}^{t} &= \beta_2 \mathbf{v}^{t-1} + (1 - \beta_2) \cdot (\nabla L(\boldsymbol{\theta}^{t}))^{2} \quad &\text{(二阶矩 / 自适应学习率)} \\
+\hat{\mathbf{m}}^{t} &= \frac{\mathbf{m}^{t}}{1 - \beta_1^{t}}, \quad \hat{\mathbf{v}}^{t} = \frac{\mathbf{v}^{t}}{1 - \beta_2^{t}} \quad &\text{(偏差校正 Bias Correction)} \\
+\boldsymbol{\theta}^{t+1} &\leftarrow \boldsymbol{\theta}^{t} - \frac{\eta}{\sqrt{\hat{\mathbf{v}}^{t}} + \varepsilon} \cdot \hat{\mathbf{m}}^{t}
+\end{aligned}
+$$
+
+- $\beta_1$ — 一阶矩衰减率，通常为 $0.9$
+- $\beta_2$ — 二阶矩衰减率，通常为 $0.999$
+- 偏差校正 (Bias Correction) 用于修正初始化阶段 $\mathbf{m}^{t}$ 和 $\mathbf{v}^{t}$ 偏向零的问题
+
+> 💡 **一句话总结**：Adam = RMSProp 的自适应学习率 + Momentum 的惯性 → 既有「方向记忆」又有「步长自适应」，是实际训练中的默认选择。
+
+### 5.5 学习率调度 (Learning Rate Scheduling)
+
+除了让学习率自适应地随参数变化外，还可以让学习率**随时间变化**。常见策略：
+
+#### Learning Rate Decay（学习率衰减）
+
+随着训练进行，逐步减小学习率：
+
+$$
+\eta_t = \frac{\eta_0}{1 + \gamma \cdot t} \quad \text{或} \quad \eta_t = \eta_0 \cdot \gamma^{\lfloor t / T \rfloor}
+$$
+
+- **动机**：训练初期需要大步长快速下降，接近收敛时需要小步长精细调整，防止在最优解附近震荡
+- **常见实现**：Step Decay、Exponential Decay、Cosine Annealing
+
+#### Warm Up（预热）
+
+在训练的最初几步，让学习率从零逐步增大到目标值：
+
+$$
+\eta_t = \eta_{\text{target}} \cdot \frac{t}{T_{\text{warmup}}} \quad (t < T_{\text{warmup}})
+$$
+
+- **动机**：训练刚开始时，模型参数是随机初始化的，梯度方向不稳定。先用小学习率让优化器「探索」并搜集梯度统计信息（尤其是 Adam 的 $\mathbf{m}^{t}$ 和 $\mathbf{v}^{t}$），然后再用正常学习率加速下降
+- **常见实践**：在 Transformer 训练和大模型预训练中几乎必用
+
+### 5.6 优化器演进总结
+
+从最基本的梯度下降出发，逐步加入各项改进：
+
+| 优化器 | 核心改进 |
+|--------|---------|
+| **Vanilla Gradient Descent** | $\boldsymbol{\theta} \leftarrow \boldsymbol{\theta} - \eta \nabla L$ |
+| **+ Momentum** | 加入惯性，帮助逃离鞍点、加速收敛 |
+| **+ Adaptive Learning Rate (RMSProp)** | 每个参数有独立的学习率，适应不同方向的梯度尺度 |
+| **+ Learning Rate Scheduling** | 学习率随时间衰减，训练末段精细调整 |
+| **Adam** | Momentum + RMSProp + Bias Correction 的一体化方案 |
+
+现代深度学习训练的标准配置：**Adam + Warm Up + Learning Rate Decay**。
+
 
 ---
 
-## 5. 相关链接 (Related)
+## 6. 相关链接 (Related)
 
 - [[Guide.md]] — 梯度下降和批次训练入门
 - [[梯度下降 Gradient Descent]] — 梯度下降的详细推导和变体

@@ -1,3 +1,13 @@
+---
+tags:
+  - ml/concept
+  - ml/activation
+aliases:
+  - Activation Function
+  - 激活函数
+created: 2026-07-20
+---
+
 # 激活函数 (Activation Function)
 
 ## 1. 定义

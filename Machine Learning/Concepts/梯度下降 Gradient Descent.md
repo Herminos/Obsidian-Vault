@@ -1,3 +1,13 @@
+---
+tags:
+  - ml/concept
+  - ml/optimization
+aliases:
+  - Gradient Descent
+  - 梯度下降
+created: 2026-07-20
+---
+
 # 梯度下降 (Gradient Descent)
 
 ## 1. 定义

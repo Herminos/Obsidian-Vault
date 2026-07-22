@@ -1,3 +1,13 @@
+---
+tags:
+  - ml/concept
+  - ml/regularization
+aliases:
+  - Regularization
+  - 正则化
+created: 2026-07-20
+---
+
 # 正则化 (Regularization)
 
 ## 1. 定义

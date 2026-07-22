@@ -1,3 +1,12 @@
+---
+tags:
+  - ml/diagnosis
+aliases:
+  - 训练诊断
+  - Training Diagnosis
+created: 2026-07-20
+---
+
 # 机器学习训练流程与诊断 (ML Training Pipeline & Diagnosis)
 
 训练一个机器学习模型不是一蹴而就的。当模型表现不佳时，需要按照系统化的流程逐步排查问题。本笔记梳理了李宏毅课程中提出的诊断框架。

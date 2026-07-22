@@ -1,3 +1,13 @@
+---
+tags:
+  - ml/concept
+  - ml/loss
+aliases:
+  - Loss Function
+  - 损失函数
+created: 2026-07-20
+---
+
 # 损失函数 (Loss Function)
 
 ## 1. 定义

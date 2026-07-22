@@ -1,3 +1,13 @@
+---
+tags:
+  - ml/concept
+  - ml/bias-variance
+aliases:
+  - Overfitting
+  - 过拟合
+created: 2026-07-20
+---
+
 # 过拟合 (Overfitting)
 
 ## 1. 定义

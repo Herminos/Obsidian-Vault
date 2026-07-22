@@ -1,3 +1,12 @@
+---
+tags:
+  - ml/guide
+aliases:
+  - 机器学习入门
+  - ML Guide
+created: 2026-07-20
+---
+
 # 机器学习入门 (Introduction to Machine Learning)
 
 机器学习（Machine Learning）的核心思想约等于**寻找一个函数（Find a Function）**。

@@ -1,3 +1,13 @@
+---
+tags:
+  - ml/concept
+  - ml/linear
+aliases:
+  - Linear Model
+  - 线性模型
+created: 2026-07-20
+---
+
 # 线性模型 (Linear Model)
 
 ## 1. 定义

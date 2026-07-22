@@ -1,3 +1,13 @@
+---
+tags:
+  - ml/concept
+  - ml/bias-variance
+aliases:
+  - Model Bias
+  - 模型偏差
+created: 2026-07-20
+---
+
 # 模型偏差 (Model Bias)
 
 ## 1. 定义

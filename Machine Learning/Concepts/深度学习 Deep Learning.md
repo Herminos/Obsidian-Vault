@@ -1,3 +1,13 @@
+---
+tags:
+  - ml/concept
+  - ml/deep-learning
+aliases:
+  - Deep Learning
+  - 深度学习
+created: 2026-07-20
+---
+
 # 深度学习 (Deep Learning)
 
 ## 1. 定义
