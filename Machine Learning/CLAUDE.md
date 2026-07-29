@@ -8,9 +8,9 @@
 
 > 每次对话后更新，记录 Claudian 做了哪些变更。后续对话开始时先读此区了解历史。
 
-### 2026-07-22 — 首次大规模整理 + 全量重命名
+### 2026-07-22 — 首次大规模整理 + 全量重命名 + 统计学习
 
-**用户请求：** 整理 ML 笔记、创建概念文件夹、建立记忆区、全部重命名
+**用户请求：** 整理 ML 笔记、创建概念文件夹、建立记忆区、全部重命名、整理统计学习笔记并推送 GitHub
 
 **完成事项：**
 
@@ -18,9 +18,10 @@
 |------|------|------|
 | 📝 整理 | `ml.md` → `训练流程与诊断 ml.md` | 大纲速记 → 结构化笔记：6 章节 + 决策树流程 + LaTeX + 链接 |
 | 📝 整理 | `Optimization.md` → `优化 Optimization.md` | 补全泰勒展开 / Hessian / 批次对比 / 动量 / 自适应学习率 |
-| 📝 整理 | `Classification.md` → `分类 Classification.md` | 补全 Softmax / Cross-Entropy 公式、交叉熵 vs MSE 梯度分析 |
+| 📝 整理 | `Classification.md` → `分类 Classification.md` | 补全 Softmax / Cross-Entropy、交叉熵 vs MSE 梯度分析 |
+| 📝 整理 | `统计学习 Statistical Learning.md` | 大纲速记 → 结构化：Hoeffding 推导、VC 维、泛化误差三角分解 |
 | 🆕 创建 | `Concepts/` (9 个笔记) | 过拟合、正则化、模型偏差、梯度下降、损失函数、线性模型、激活函数、神经网络、深度学习 |
-| 🔧 重命名 | `Guide.md` → `入门 Guide.md` | 统一命名规范，批量更新全部 18 处 wikilink 引用 |
+| 🔧 重命名 | `Guide.md` → `入门 Guide.md` | 统一命名规范，批量更新 18 处 wikilink |
 | 🔧 维护 | `CLAUDE.md` | 索引、记忆区、命名规范、维护规则 |
 
 **当前目录结构：**
@@ -31,6 +32,7 @@ Machine Learning/
 ├── 训练流程与诊断 ml.md
 ├── 优化 Optimization.md
 ├── 分类 Classification.md
+├── 统计学习 Statistical Learning.md
 └── Concepts/ (9 个概念笔记)
 ```
 
@@ -126,6 +128,7 @@ $$
 - `训练流程与诊断 ml.md` — 训练流程与诊断：过拟合、模型偏差、交叉验证、不匹配
 - `优化 Optimization.md` — 优化失败诊断：临界点、鞍点、Hessian 矩阵、批次对比、动量、自适应学习率
 - `分类 Classification.md` — 分类任务：Softmax、One-Hot 编码、交叉熵 vs MSE
+- `统计学习 Statistical Learning.md` — 统计学习理论：Hoeffding 不等式、VC 维、泛化误差、模型权衡
 - `Concepts/` — 概念详解目录（9 个笔记）：过拟合、正则化、模型偏差、梯度下降、损失函数、线性模型、激活函数、神经网络、深度学习
 
 ### 7. 整理流程
