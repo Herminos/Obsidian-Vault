@@ -8,7 +8,9 @@
 
 > 每次对话后更新，记录 Claudian 做了哪些变更。后续对话开始时先读此区了解历史。
 
-### 2026-07-22 — 首次大规模整理 + 全量重命名 + 统计学习
+### 2026-07-22 — 首次大规模整理 + 全量重命名 + ML→DL 迁移
+
+**用户请求：** 整理 ML 笔记、创建概念文件夹、建立记忆区、全部重命名、整理统计学习/CNN 笔记、全部 ML→DL 重命名
 
 **用户请求：** 整理 ML 笔记、创建概念文件夹、建立记忆区、全部重命名、整理统计学习笔记并推送 GitHub
 
@@ -23,11 +25,12 @@
 | 📝 整理 | `卷积神经网络 CNN.md` | 大纲速记 → 结构化：感受野/参数共享/卷积层推导、池化、AlphaGo、Spatial Transformer |
 | 🆕 创建 | `Concepts/` (9 个笔记) | 过拟合、正则化、模型偏差、梯度下降、损失函数、线性模型、激活函数、神经网络、深度学习 |
 | 🔧 重命名 | `Guide.md` → `入门 Guide.md` | 统一命名规范，批量更新 18 处 wikilink |
+| 🔧 迁移 | `Machine Learning/` → `深度学习 Deep Learning/` | 目录重命名 + 全部文件「机器学习→深度学习」「Machine Learning→Deep Learning」批量替换 |
 | 🔧 维护 | `CLAUDE.md` | 索引、记忆区、命名规范、维护规则 |
 
 **当前目录结构：**
 ```
-Machine Learning/
+Deep Learning/
 ├── CLAUDE.md
 ├── 入门 Guide.md
 ├── 训练流程与诊断 ml.md
@@ -126,7 +129,7 @@ $$
 ### 6. 已有笔记索引
 
 当前已有笔记：
-- `入门 Guide.md` — 课程入门：机器学习基本概念、损失函数、梯度下降、线性模型
+- `入门 Guide.md` — 课程入门：深度学习基本概念、损失函数、梯度下降、线性模型
 - `训练流程与诊断 ml.md` — 训练流程与诊断：过拟合、模型偏差、交叉验证、不匹配
 - `优化 Optimization.md` — 优化失败诊断：临界点、鞍点、Hessian 矩阵、批次对比、动量、自适应学习率
 - `分类 Classification.md` — 分类任务：Softmax、One-Hot 编码、交叉熵 vs MSE
@@ -147,7 +150,6 @@ $$
 
 | 中文 | English |
 |------|---------|
-| 机器学习 | Machine Learning |
 | 深度学习 | Deep Learning |
 | 回归 | Regression |
 | 分类 | Classification |
