@@ -21,7 +21,7 @@
 | 📝 整理 | `ml.md` → `训练流程与诊断 ml.md` | 大纲速记 → 结构化笔记：6 章节 + 决策树流程 + LaTeX + 链接 |
 | 📝 整理 | `Optimization.md` → `优化 Optimization.md` | 补全泰勒展开 / Hessian / 批次对比 / 动量 / 自适应学习率 |
 | 📝 整理 | `Classification.md` → `分类 Classification.md` | 补全 Softmax / Cross-Entropy、交叉熵 vs MSE 梯度分析 |
-| 📝 整理 | `统计学习 Statistical Learning.md` | 大纲速记 → 结构化：Hoeffding 推导、VC 维、泛化误差三角分解 |
+| 📝 整理 | `统计学习 Statistical Learning.md` | 大纲速记 → 结构化 + 新增 §7.1「深度>宽度」参数效率论证 |
 | 📝 整理 | `卷积神经网络 CNN.md` | 大纲速记 → 结构化：感受野/参数共享/卷积层推导、池化、AlphaGo、Spatial Transformer |
 | 🆕 创建 | `Concepts/` (9 个笔记) | 过拟合、正则化、模型偏差、梯度下降、损失函数、线性模型、激活函数、神经网络、深度学习 |
 | 🔧 重命名 | `Guide.md` → `入门 Guide.md` | 统一命名规范，批量更新 18 处 wikilink |

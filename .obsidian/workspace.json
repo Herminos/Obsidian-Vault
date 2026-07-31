@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "深度学习 Deep Learning/入门 Guide.md",
+                "file": "深度学习 Deep Learning/统计学习 Statistical Learning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "入门 Guide"
+              "title": "统计学习 Statistical Learning"
             }
           }
         ]
@@ -207,6 +207,13 @@
   },
   "active": "163bec09529f3a42",
   "lastOpenFiles": [
+    "深度学习 Deep Learning/CLAUDE.md.tmp.66218.ade50955b532",
+    "深度学习 Deep Learning/统计学习 Statistical Learning.md.tmp.66218.5b612117f8ed",
+    "深度学习 Deep Learning/统计学习 Statistical Learning.md.tmp.66218.0dffe9a52313",
+    "深度学习 Deep Learning/Concepts/模型偏差 Model Bias.md",
+    "深度学习 Deep Learning/统计学习 Statistical Learning.md",
+    "深度学习 Deep Learning/深度学习优势.md",
+    "深度学习 Deep Learning/入门 Guide.md",
     "深度学习 Deep Learning/Concepts/深度学习 Deep Learning.md.tmp.11917.0e4bf772432a",
     "深度学习 Deep Learning/CLAUDE.md.tmp.11917.0bf65891a2b6",
     "深度学习 Deep Learning/CLAUDE.md.tmp.11917.b6f537f009d4",
@@ -221,28 +228,21 @@
     "深度学习 Deep Learning/Concepts/激活函数 Activation Function.md",
     "深度学习 Deep Learning/Concepts/深度学习 Deep Learning.md",
     "深度学习 Deep Learning/Concepts/正则化 Regularization.md",
-    "深度学习 Deep Learning/Concepts/模型偏差 Model Bias.md",
     "深度学习 Deep Learning/Concepts/梯度下降 Gradient Descent.md",
     "深度学习 Deep Learning/Concepts/损失函数 Loss Function.md",
     "深度学习 Deep Learning/训练流程与诊断 ml.md",
-    "深度学习 Deep Learning/统计学习 Statistical Learning.md",
-    "深度学习 Deep Learning/入门 Guide.md",
     "深度学习 Deep Learning/优化 Optimization.md",
     "深度学习 Deep Learning/Concepts",
     "深度学习 Deep Learning/CLAUDE.md",
     "深度学习 Deep Learning",
     "Machine Learning/卷积神经网络 CNN.md",
     "Machine Learning/CLAUDE.md.tmp.11917.3080f2ac8c49",
-    "Machine Learning/CLAUDE.md.tmp.11917.0e61af2cb464",
-    "Machine Learning/CLAUDE.md.tmp.11917.0796fed55c26",
-    "Machine Learning/卷积神经网络 CNN.md.tmp.11917.1dcdee3f712f",
     "Machine Learning/入门 Guide.md",
     "Machine Learning/分类 Classification.md",
     "Machine Learning/优化 Optimization.md",
     "Machine Learning/Concepts/线性模型 Linear Model.md",
     "Machine Learning/Concepts/正则化 Regularization.md",
     "Machine Learning/Concepts/梯度下降 Gradient Descent.md",
-    "Machine Learning/Concepts/过拟合 Overfitting.md",
     "Pasted image 20260718165713.png",
     "未命名.canvas"
   ]
