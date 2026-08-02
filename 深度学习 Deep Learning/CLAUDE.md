@@ -10,7 +10,7 @@
 
 ### 2026-07-22 — 首次大规模整理 + 全量重命名 + ML→DL 迁移
 
-**用户请求：** 整理 ML 笔记、创建概念文件夹、建立记忆区、全部重命名、整理统计学习/CNN 笔记、全部 ML→DL 重命名
+**用户请求：** 整理 ML 笔记、创建概念文件夹、建立记忆区、全部重命名、整理统计学习/CNN/Self-Attention 笔记、全部 ML→DL 重命名
 
 **用户请求：** 整理 ML 笔记、创建概念文件夹、建立记忆区、全部重命名、整理统计学习笔记并推送 GitHub
 
@@ -23,6 +23,7 @@
 | 📝 整理 | `Classification.md` → `分类 Classification.md` | 补全 Softmax / Cross-Entropy、交叉熵 vs MSE 梯度分析 |
 | 📝 整理 | `统计学习 Statistical Learning.md` | 大纲速记 → 结构化 + 新增 §7.1「深度>宽度」参数效率论证 |
 | 📝 整理 | `卷积神经网络 CNN.md` | 大纲速记 → 结构化：感受野/参数共享/卷积层推导、池化、AlphaGo、Spatial Transformer |
+| 📝 整理 | `自注意力 Self-Attention.md` | 大纲速记 → 结构化：Q/K/V 完整机制、矩阵推导、Multi-Head、位置编码、CNN/RNN 对比 |
 | 🆕 创建 | `Concepts/` (9 个笔记) | 过拟合、正则化、模型偏差、梯度下降、损失函数、线性模型、激活函数、神经网络、深度学习 |
 | 🔧 重命名 | `Guide.md` → `入门 Guide.md` | 统一命名规范，批量更新 18 处 wikilink |
 | 🔧 迁移 | `Machine Learning/` → `深度学习 Deep Learning/` | 目录重命名 + 全部文件「机器学习→深度学习」「Machine Learning→Deep Learning」批量替换 |
@@ -38,6 +39,7 @@ Deep Learning/
 ├── 分类 Classification.md
 ├── 统计学习 Statistical Learning.md
 ├── 卷积神经网络 CNN.md
+├── 自注意力 Self-Attention.md
 └── Concepts/ (9 个概念笔记)
 ```
 
@@ -135,6 +137,7 @@ $$
 - `分类 Classification.md` — 分类任务：Softmax、One-Hot 编码、交叉熵 vs MSE
 - `统计学习 Statistical Learning.md` — 统计学习理论：Hoeffding 不等式、VC 维、泛化误差、模型权衡
 - `卷积神经网络 CNN.md` — CNN：感受野、参数共享、卷积层、池化、AlphaGo 案例
+- `自注意力 Self-Attention.md` — Self-Attention：Q/K/V 机制、Multi-Head、位置编码、CNN/RNN 对比
 - `Concepts/` — 概念详解目录（9 个笔记）：过拟合、正则化、模型偏差、梯度下降、损失函数、线性模型、激活函数、神经网络、深度学习
 
 ### 7. 整理流程
