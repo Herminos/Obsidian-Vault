@@ -26,6 +26,7 @@
 | 📝 整理 | `自注意力 Self-Attention.md` | 大纲速记 → 结构化：Q/K/V 完整机制、矩阵推导、Multi-Head、位置编码、CNN/RNN 对比 |
 | 📝 整理 | `Batch Normalization.md` | 大纲速记 → 结构化：BN 完整机制、可学习 γ/β、训练/推理差异、Internal Covariate Shift、BN/LN/IN/GN 对比 |
 | 📝 整理 | `Transformer.md` | 大纲速记 → 结构化：Encoder/Decoder 完整架构、Masked MHA、Cross-Attention、Beam Search、Scheduled Sampling |
+| 📝 整理 | `All Kinds of Attention.md` → `注意力变体 Attention Variants.md` | 大纲速记 → 结构化：Sparse/Linformer/Linear Attention/Synthesizer + 复杂度对比表 |
 | 🆕 创建 | `Concepts/` (9 个笔记) | 过拟合、正则化、模型偏差、梯度下降、损失函数、线性模型、激活函数、神经网络、深度学习 |
 | 🔧 重命名 | `Guide.md` → `入门 Guide.md` | 统一命名规范，批量更新 18 处 wikilink |
 | 🔧 迁移 | `Machine Learning/` → `深度学习 Deep Learning/` | 目录重命名 + 全部文件「机器学习→深度学习」「Machine Learning→Deep Learning」批量替换 |
@@ -44,6 +45,7 @@ Deep Learning/
 ├── 自注意力 Self-Attention.md
 ├── Batch Normalization.md
 ├── Transformer.md
+├── 注意力变体 Attention Variants.md
 └── Concepts/ (9 个概念笔记)
 ```
 
@@ -144,6 +146,7 @@ $$
 - `自注意力 Self-Attention.md` — Self-Attention：Q/K/V 机制、Multi-Head、位置编码、CNN/RNN 对比
 - `Batch Normalization.md` — BN：归一化机制、可学习参数、训练/推理差异、BN/LN/IN/GN 对比
 - `Transformer.md` — Transformer：Encoder/Decoder 架构、Cross-Attention、训练技巧、架构对比
+- `注意力变体 Attention Variants.md` — 注意力变体：Sparse/Linformer/Linear Attention/Synthesizer 对比
 - `Concepts/` — 概念详解目录（9 个笔记）：过拟合、正则化、模型偏差、梯度下降、损失函数、线性模型、激活函数、神经网络、深度学习
 
 ### 7. 整理流程
