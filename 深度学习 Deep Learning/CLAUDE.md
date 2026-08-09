@@ -26,7 +26,8 @@
 | 📝 整理 | `自注意力 Self-Attention.md` | 大纲速记 → 结构化：Q/K/V 完整机制、矩阵推导、Multi-Head、位置编码、CNN/RNN 对比 |
 | 📝 整理 | `Batch Normalization.md` | 大纲速记 → 结构化：BN 完整机制、可学习 γ/β、训练/推理差异、Internal Covariate Shift、BN/LN/IN/GN 对比 |
 | 📝 整理 | `Transformer.md` | 大纲速记 → 结构化：Encoder/Decoder 完整架构、Masked MHA、Cross-Attention、Beam Search、Scheduled Sampling |
-| 📝 整理 | `All Kinds of Attention.md` → `注意力变体 Attention Variants.md` | 大纲速记 → 结构化：Sparse/Linformer/Linear Attention/Synthesizer + 复杂度对比表 |
+| 📝 整理 | `All Kinds of Attention.md` → `注意力变体 Attention Variants.md` | 大纲速记 → 结构化：Sparse/Linformer/Linear/Synthesizer/Latent(MLA) + 复杂度对比表 |
+| 📝 整理 | `GAN.md` → `生成对抗网络 GAN.md` | 大纲速记 → 结构化：交替训练流程、JS 散度问题、WGAN/WGAN-GP、D→Critic |
 | 🆕 创建 | `Concepts/` (9 个笔记) | 过拟合、正则化、模型偏差、梯度下降、损失函数、线性模型、激活函数、神经网络、深度学习 |
 | 🔧 重命名 | `Guide.md` → `入门 Guide.md` | 统一命名规范，批量更新 18 处 wikilink |
 | 🔧 迁移 | `Machine Learning/` → `深度学习 Deep Learning/` | 目录重命名 + 全部文件「机器学习→深度学习」「Machine Learning→Deep Learning」批量替换 |
@@ -42,6 +43,7 @@ Deep Learning/
 ├── 分类 Classification.md
 ├── 统计学习 Statistical Learning.md
 ├── 卷积神经网络 CNN.md
+├── 生成对抗网络 GAN.md
 ├── 自注意力 Self-Attention.md
 ├── Batch Normalization.md
 ├── Transformer.md
@@ -144,6 +146,7 @@ $$
 - `统计学习 Statistical Learning.md` — 统计学习理论：Hoeffding 不等式、VC 维、泛化误差、模型权衡
 - `卷积神经网络 CNN.md` — CNN：感受野、参数共享、卷积层、池化、AlphaGo 案例
 - `自注意力 Self-Attention.md` — Self-Attention：Q/K/V 机制、Multi-Head、位置编码、CNN/RNN 对比
+- `生成对抗网络 GAN.md` — GAN：生成器/判别器对抗、训练流程、JS→Wasserstein、WGAN/WGAN-GP
 - `Batch Normalization.md` — BN：归一化机制、可学习参数、训练/推理差异、BN/LN/IN/GN 对比
 - `Transformer.md` — Transformer：Encoder/Decoder 架构、Cross-Attention、训练技巧、架构对比
 - `注意力变体 Attention Variants.md` — 注意力变体：Sparse/Linformer/Linear Attention/Synthesizer 对比

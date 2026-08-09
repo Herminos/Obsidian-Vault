@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "深度学习 Deep Learning/自注意力 Self-Attention.md",
+                "file": "深度学习 Deep Learning/生成对抗网络 GAN.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "自注意力 Self-Attention"
+              "title": "生成对抗网络 GAN"
             }
           },
           {
@@ -49,7 +49,8 @@
               "title": "Transformer"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -236,8 +237,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "163bec09529f3a42",
+  "active": "e620238b38a79b7e",
   "lastOpenFiles": [
+    "深度学习 Deep Learning/自注意力 Self-Attention.md",
+    "深度学习 Deep Learning/GAN.md",
+    "深度学习 Deep Learning/CLAUDE.md.tmp.15106.0921ab48aaf5",
+    "深度学习 Deep Learning/CLAUDE.md.tmp.15106.8806f8aee0cb",
+    "深度学习 Deep Learning/CLAUDE.md.tmp.15106.7b17853cd29b",
+    "深度学习 Deep Learning/生成对抗网络 GAN.md",
+    "深度学习 Deep Learning/GAN.md.tmp.15106.78cb1072eb19",
+    "深度学习 Deep Learning/注意力变体 Attention Variants.md",
     "深度学习 Deep Learning/注意力变体 Attention Variants.md.tmp.317263.72dbb11164e4",
     "深度学习 Deep Learning/注意力变体 Attention Variants.md.tmp.317263.1210cf0feaf7",
     "深度学习 Deep Learning/注意力变体 Attention Variants.md.tmp.317263.56e390f22d46",
@@ -245,15 +254,8 @@
     "深度学习 Deep Learning/CLAUDE.md.tmp.317263.69f5927918e0",
     "深度学习 Deep Learning/统计学习 Statistical Learning.md",
     "深度学习 Deep Learning/CLAUDE.md.tmp.317263.d2768ebe34b9",
-    "深度学习 Deep Learning/自注意力 Self-Attention.md",
     "深度学习 Deep Learning/All Kinds of Attention.md",
-    "深度学习 Deep Learning/CLAUDE.md.tmp.317263.bf2c2747a7bb",
-    "深度学习 Deep Learning/注意力变体 Attention Variants.md",
-    "深度学习 Deep Learning/All Kinds of Attention.md.tmp.317263.f51454ff0ab3",
     "深度学习 Deep Learning/Transformer.md",
-    "深度学习 Deep Learning/CLAUDE.md.tmp.481938.9f56ccae944a",
-    "深度学习 Deep Learning/CLAUDE.md.tmp.481938.6adeb17df391",
-    "深度学习 Deep Learning/CLAUDE.md.tmp.481938.eb85e1190821",
     "深度学习 Deep Learning/Batch Normalization.md",
     "深度学习 Deep Learning/Concepts/模型偏差 Model Bias.md",
     "深度学习 Deep Learning/深度学习优势.md",
@@ -272,8 +274,6 @@
     "深度学习 Deep Learning/训练流程与诊断 ml.md",
     "深度学习 Deep Learning/优化 Optimization.md",
     "深度学习 Deep Learning/CLAUDE.md",
-    "Machine Learning/卷积神经网络 CNN.md",
-    "Machine Learning/入门 Guide.md",
     "Pasted image 20260718165713.png",
     "未命名.canvas"
   ]
