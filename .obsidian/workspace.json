@@ -27,12 +27,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "深度学习 Deep Learning/生成对抗网络 GAN.md",
+                "file": "深度学习 Deep Learning/自注意力 Self-Attention.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "生成对抗网络 GAN"
+              "title": "自注意力 Self-Attention"
+            }
+          },
+          {
+            "id": "ab500d9c686989e8",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           },
           {
@@ -109,8 +119,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "68b7048baa740e34",
@@ -126,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "欢迎.md",
+                "file": "Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +145,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "欢迎 的反向链接列表"
+              "title": "Home 的反向链接列表"
             }
           },
           {
@@ -145,12 +154,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "欢迎.md",
+                "file": "Home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "欢迎 的出链列表"
+              "title": "Home 的出链列表"
             }
           },
           {
@@ -188,13 +197,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "欢迎.md",
+                "file": "Home.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "欢迎 的大纲"
+              "title": "Home 的大纲"
             }
           },
           {
@@ -239,30 +248,20 @@
   },
   "active": "e620238b38a79b7e",
   "lastOpenFiles": [
+    "离散数学/README.md",
+    "离散数学/离散数学-第3章-关系-知识总结.md",
+    "离散数学/离散数学-第2章-映射-知识总结.md",
+    "离散数学/离散数学-第1章-集合与逻辑-知识总结.md",
     "深度学习 Deep Learning/自注意力 Self-Attention.md",
-    "深度学习 Deep Learning/GAN.md",
-    "深度学习 Deep Learning/CLAUDE.md.tmp.15106.0921ab48aaf5",
-    "深度学习 Deep Learning/CLAUDE.md.tmp.15106.8806f8aee0cb",
-    "深度学习 Deep Learning/CLAUDE.md.tmp.15106.7b17853cd29b",
-    "深度学习 Deep Learning/生成对抗网络 GAN.md",
-    "深度学习 Deep Learning/GAN.md.tmp.15106.78cb1072eb19",
     "深度学习 Deep Learning/注意力变体 Attention Variants.md",
-    "深度学习 Deep Learning/注意力变体 Attention Variants.md.tmp.317263.72dbb11164e4",
-    "深度学习 Deep Learning/注意力变体 Attention Variants.md.tmp.317263.1210cf0feaf7",
-    "深度学习 Deep Learning/注意力变体 Attention Variants.md.tmp.317263.56e390f22d46",
-    "深度学习 Deep Learning/注意力变体 Attention Variants.md.tmp.317263.f8b060712e8f",
-    "深度学习 Deep Learning/CLAUDE.md.tmp.317263.69f5927918e0",
-    "深度学习 Deep Learning/统计学习 Statistical Learning.md",
-    "深度学习 Deep Learning/CLAUDE.md.tmp.317263.d2768ebe34b9",
-    "深度学习 Deep Learning/All Kinds of Attention.md",
-    "深度学习 Deep Learning/Transformer.md",
     "深度学习 Deep Learning/Batch Normalization.md",
+    "深度学习 Deep Learning/Transformer.md",
+    "深度学习 Deep Learning/生成对抗网络 GAN.md",
+    "深度学习 Deep Learning/统计学习 Statistical Learning.md",
     "深度学习 Deep Learning/Concepts/模型偏差 Model Bias.md",
-    "深度学习 Deep Learning/深度学习优势.md",
     "深度学习 Deep Learning/入门 Guide.md",
     "深度学习 Deep Learning/分类 Classification.md",
     "深度学习 Deep Learning/卷积神经网络 CNN.md",
-    "Machine Learning/统计学习 Statistical Learning.md",
     "深度学习 Deep Learning/Concepts/过拟合 Overfitting.md",
     "深度学习 Deep Learning/Concepts/线性模型 Linear Model.md",
     "深度学习 Deep Learning/Concepts/神经网络 Neural Network.md",
@@ -272,9 +271,6 @@
     "深度学习 Deep Learning/Concepts/梯度下降 Gradient Descent.md",
     "深度学习 Deep Learning/Concepts/损失函数 Loss Function.md",
     "深度学习 Deep Learning/训练流程与诊断 ml.md",
-    "深度学习 Deep Learning/优化 Optimization.md",
-    "深度学习 Deep Learning/CLAUDE.md",
-    "Pasted image 20260718165713.png",
-    "未命名.canvas"
+    "深度学习 Deep Learning/优化 Optimization.md"
   ]
 }
