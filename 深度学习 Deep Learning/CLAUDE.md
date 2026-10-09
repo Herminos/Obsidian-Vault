@@ -1,208 +1,75 @@
-# CLAUDE.md — 李宏毅深度学习 2026 笔记整理规范
+# 深度学习笔记维护规范
 
-## 项目概述
+## 目标
 
-本目录是学习李宏毅 (Hung-yi Lee) 2026 年深度学习课程的 Obsidian 笔记库。笔记以中文为主，使用 Obsidian 双向链接组织知识图谱。
+本目录用于维护李宏毅深度学习课程笔记。笔记以中文解释为主，首次出现的专业术语附英文名，数学表达使用 Obsidian 兼容的 LaTeX。
 
-## 记忆区 (Session Log)
+## 文件结构
 
-> 每次对话后更新，记录 Claudian 做了哪些变更。后续对话开始时先读此区了解历史。
-
-### 2026-07-22 — 首次大规模整理 + 全量重命名 + ML→DL 迁移
-
-**用户请求：** 整理 ML 笔记、创建概念文件夹、建立记忆区、全部重命名、整理统计学习/CNN/Self-Attention 笔记、全部 ML→DL 重命名
-
-**用户请求：** 整理 ML 笔记、创建概念文件夹、建立记忆区、全部重命名、整理统计学习笔记并推送 GitHub
-
-**完成事项：**
-
-| 操作 | 文件 | 说明 |
-|------|------|------|
-| 📝 整理 | `ml.md` → `训练流程与诊断 ml.md` | 大纲速记 → 结构化笔记：6 章节 + 决策树流程 + LaTeX + 链接 |
-| 📝 整理 | `Optimization.md` → `优化 Optimization.md` | 补全泰勒展开 / Hessian / 批次对比 / 动量 / 自适应学习率 |
-| 📝 整理 | `Classification.md` → `分类 Classification.md` | 补全 Softmax / Cross-Entropy、交叉熵 vs MSE 梯度分析 |
-| 📝 整理 | `统计学习 Statistical Learning.md` | 大纲速记 → 结构化 + 新增 §7.1「深度>宽度」参数效率论证 |
-| 📝 整理 | `卷积神经网络 CNN.md` | 大纲速记 → 结构化：感受野/参数共享/卷积层推导、池化、AlphaGo、Spatial Transformer |
-| 📝 整理 | `自注意力 Self-Attention.md` | 大纲速记 → 结构化：Q/K/V 完整机制、矩阵推导、Multi-Head、位置编码、CNN/RNN 对比 |
-| 📝 整理 | `Batch Normalization.md` | 大纲速记 → 结构化：BN 完整机制、可学习 γ/β、训练/推理差异、Internal Covariate Shift、BN/LN/IN/GN 对比 |
-| 📝 整理 | `Transformer.md` | 大纲速记 → 结构化：Encoder/Decoder 完整架构、Masked MHA、Cross-Attention、Beam Search、Scheduled Sampling |
-| 📝 整理 | `All Kinds of Attention.md` → `注意力变体 Attention Variants.md` | 大纲速记 → 结构化：Sparse/Linformer/Linear/Synthesizer/Latent(MLA) + 复杂度对比表 |
-| 📝 整理 | `GAN.md` → `生成对抗网络 GAN.md` | 大纲速记 → 结构化：交替训练流程、JS 散度问题、WGAN/WGAN-GP、D→Critic |
-| 🆕 创建 | `Concepts/` (9 个笔记) | 过拟合、正则化、模型偏差、梯度下降、损失函数、线性模型、激活函数、神经网络、深度学习 |
-| 🔧 重命名 | `Guide.md` → `入门 Guide.md` | 统一命名规范，批量更新 18 处 wikilink |
-| 🔧 迁移 | `Machine Learning/` → `深度学习 Deep Learning/` | 目录重命名 + 全部文件「机器学习→深度学习」「Machine Learning→Deep Learning」批量替换 |
-| 🔧 维护 | `CLAUDE.md` | 索引、记忆区、命名规范、维护规则 |
-
-**当前目录结构：**
-```
-Deep Learning/
+```text
+深度学习 Deep Learning/
 ├── CLAUDE.md
+├── Concepts/                  # 独立概念笔记
 ├── 入门 Guide.md
 ├── 训练流程与诊断 ml.md
 ├── 优化 Optimization.md
 ├── 分类 Classification.md
 ├── 统计学习 Statistical Learning.md
 ├── 卷积神经网络 CNN.md
-├── 生成对抗网络 GAN.md
 ├── 自注意力 Self-Attention.md
-├── Batch Normalization.md
 ├── Transformer.md
 ├── 注意力变体 Attention Variants.md
-└── Concepts/ (9 个概念笔记)
+├── 生成对抗网络 GAN.md
+└── Batch Normalization.md
 ```
 
----
+## 笔记格式
 
-## 笔记整理规范
+每个主题笔记尽量包含：
 
-### 1. 语言规范
+1. 一句话定义和使用场景；
+2. 核心机制或推导；
+3. 关键结论与常见误区；
+4. 相关笔记链接。
 
-- **正文使用中文**书写，确保语句通顺、逻辑清晰。
-- **专有名词首次出现时**，在中文译名后用圆括号标注英文原文，格式：
-  - `梯度下降 (Gradient Descent)`
-  - `损失函数 (Loss Function)`
-  - `学习率 (Learning Rate)`
-- 后续同一笔记中再次出现该术语时，可直接使用中文或英文缩写。
+行内公式使用 `$...$`，独立公式使用 `$$...$$`。多字符下标、偏导数和期望分别写成 `$x_{t}$`、`\frac{\partial L}{\partial w}` 和 `$\mathbb{E}[X]$`。
 
-### 2. 公式排版（严格 LaTeX）
-
-- **行内公式**使用 `$...$`，如 `$y = wx + b$`
-- **独立公式块**使用 `$$...$$`，如：
-  $$
-  L(w,b) = \frac{1}{N} \sum_{n=1}^{N} e_n
-  $$
-- 多字符下标用花括号包裹：`x_{1}` 而非 `x_1`
-- 使用 `\hat{y}` 表示预测值，`\bar{y}` 表示均值
-- 偏导数使用 `\frac{\partial L}{\partial w}`
-- 花体/特殊字体：`\mathcal{L}`, `\mathbb{E}`
-- 常见符号对照：
-  - `\eta` — 学习率
-  - `\theta` — 参数集合
-  - `\nabla` — 梯度算子
-  - `\sum` / `\prod` — 求和 / 求积
-
-### 3. Obsidian 双向链接
-
-- 使用 `[[笔记名]]` 创建到其他笔记的链接
-- 使用 `[[笔记名#标题]]` 链接到特定章节
-- 使用 `[[笔记名|显示文本]]` 自定义链接显示文字
-- 核心概念应建立独立笔记并互相链接，例如：
-  - `[[梯度下降 Gradient Descent]]`
-  - `[[损失函数 Loss Function]]`
-  - `[[线性模型 Linear Model]]`
-  - `[[过拟合 Overfitting]]`
-
-### 4. 笔记结构模板
-
-每节课的笔记建议如下结构：
+示例：
 
 ```markdown
-# 课程标题 (Lecture Title)
+## 梯度下降 (Gradient Descent)
 
-## 1. 核心概念 (Core Concepts)
-
-概念解释，专有名词标注英文。
-
-## 2. 数学推导 (Mathematical Derivation)
+梯度下降沿损失函数下降最快的方向更新参数：
 
 $$
-公式块
+\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t).
 $$
 
-## 3. 关键结论 (Key Takeaways)
-
-- 要点列表
-- ...
-
-## 4. 相关链接 (Related)
-
-- [[梯度下降 Gradient Descent]]
-- [[损失函数 Loss Function]]
+相关概念：[[损失函数 Loss Function]]、[[过拟合 Overfitting]]
 ```
 
-### 5. 行内指令标记 (For Claude)
- 
-笔记中可能出现以 `(For Claude)` 或 `(TODO)` 开头的行内指令，这些是对我的直接指示。**遇到此类标记时，必须立即执行后面的指令**，而非仅将其视为普通文本保留。
+## 双向链接
 
-常见指令类型：
-- `(For Claude) 补全 xxx` → 根据上下文补全缺失的推导、定义或公式
-- `(For Claude) 展开 xxx` → 将简略写出但未详细推导的内容展开完整
-- `(For Claude) 修正 xxx` → 检查并修正某处的错误
-- `(For Claude) 添加 xxx 的图示说明` → 用文字补充可视化描述
-- `(For Claude) 补充例子` → 为该概念添加具体的数值例子
+核心概念使用 `[[笔记名]]` 链接；需要定位到具体小节时使用 `[[笔记名#小节标题]]`。新增笔记时，同时在相关笔记的“相关概念”部分补回链，避免只建立单向链接。
 
-执行原则：
-- 指令完成的内容应**融入笔记正文**，与原有风格一致（中文 + 英文注释 + LaTeX）
-- 执行完毕后，可以**删除或注释掉**该 `(For Claude)` 标记行，表示任务已完成
-- 若指令不明确，应在执行前向用户确认意图
+## 整理流程
 
-### 6. 已有笔记索引
+1. 先读取原笔记，保留事实、公式和必要的推导。
+2. 按“定义 → 机制 → 公式 → 结论 → 例子”的顺序重排。
+3. 统一中文表述、英文术语和 LaTeX 语法。
+4. 检查链接目标是否存在，删除重复内容和无意义的占位文本。
+5. 修改后检查标题层级、公式围栏和链接格式。
 
-当前已有笔记：
-- `入门 Guide.md` — 课程入门：深度学习基本概念、损失函数、梯度下降、线性模型
-- `训练流程与诊断 ml.md` — 训练流程与诊断：过拟合、模型偏差、交叉验证、不匹配
-- `优化 Optimization.md` — 优化失败诊断：临界点、鞍点、Hessian 矩阵、批次对比、动量、自适应学习率
-- `分类 Classification.md` — 分类任务：Softmax、One-Hot 编码、交叉熵 vs MSE
-- `统计学习 Statistical Learning.md` — 统计学习理论：Hoeffding 不等式、VC 维、泛化误差、模型权衡
-- `卷积神经网络 CNN.md` — CNN：感受野、参数共享、卷积层、池化、AlphaGo 案例
-- `自注意力 Self-Attention.md` — Self-Attention：Q/K/V 机制、Multi-Head、位置编码、CNN/RNN 对比
-- `生成对抗网络 GAN.md` — GAN：生成器/判别器对抗、训练流程、JS→Wasserstein、WGAN/WGAN-GP
-- `Batch Normalization.md` — BN：归一化机制、可学习参数、训练/推理差异、BN/LN/IN/GN 对比
-- `Transformer.md` — Transformer：Encoder/Decoder 架构、Cross-Attention、训练技巧、架构对比
-- `注意力变体 Attention Variants.md` — 注意力变体：Sparse/Linformer/Linear Attention/Synthesizer 对比
-- `Concepts/` — 概念详解目录（9 个笔记）：过拟合、正则化、模型偏差、梯度下降、损失函数、线性模型、激活函数、神经网络、深度学习
+## 写作约定
 
-### 7. 整理流程
+- 正文使用清晰的中文短句，避免把多个结论堆在同一句中。
+- 每个公式紧跟变量含义和使用条件。
+- 比较多个方法时优先使用表格。
+- 代码、伪代码和超参数使用代码块或行内代码。
+- 不把给助手的临时指令写进正式笔记。
 
-当用户请求整理笔记时：
-1. 读取目标笔记文件
-2. 将混杂的中英文统一为中文叙述 + 专有名词英文注释
-3. 检查并修正所有公式的 LaTeX 语法
-4. 识别核心概念，建议或创建双向链接 `[[...]]`
-5. 保持原有的数学推导逻辑不变，仅优化表达
+## 维护记录
 
-### 8. 常用术语对照表
-
-| 中文 | English |
-|------|---------|
-| 深度学习 | Deep Learning |
-| 回归 | Regression |
-| 分类 | Classification |
-| 结构化学习 | Structured Learning |
-| 模型 | Model |
-| 参数 | Parameter |
-| 特征 | Feature |
-| 权重 | Weight |
-| 偏置 | Bias |
-| 损失函数 | Loss Function |
-| 梯度下降 | Gradient Descent |
-| 学习率 | Learning Rate |
-| 超参数 | Hyperparameter |
-| 局部最小值 | Local Minima |
-| 全局最小值 | Global Minima |
-| 训练 | Training |
-| 线性模型 | Linear Model |
-| 模型偏差 | Model Bias |
-| 过拟合 | Overfitting |
-| 欠拟合 | Underfitting |
-| 验证集 | Validation Set |
-| 测试集 | Test Set |
-| 激活函数 | Activation Function |
-| 反向传播 | Backpropagation |
-| 神经网络 | Neural Network |
-| 卷积神经网络 | Convolutional Neural Network (CNN) |
-| 循环神经网络 | Recurrent Neural Network (RNN) |
-|  transformer | Transformer |
-| 自注意力 | Self-Attention |
-| 预训练 | Pre-training |
-| 微调 | Fine-tuning |
-| 批量 | Batch |
-| 轮次 | Epoch |
-| 正则化 | Regularization |
-| 归一化 | Normalization |
-
-### 9. 记忆区维护
-
-- 每次对话结束时，必须在 CLAUDE.md 的「记忆区 (Session Log)」中追加本次会话的变更记录
-- 记录格式：日期 + 操作类型（📝整理 / 🆕创建 / 🔧维护 / 🗑️删除）+ 文件名 + 简要说明
-- 后续对话开始时，先读取记忆区了解历史变更
+| 日期 | 变更 |
+|---|---|
+| 2026-10-09 | 重写本规范，统一目录、公式、链接和整理流程。 |
